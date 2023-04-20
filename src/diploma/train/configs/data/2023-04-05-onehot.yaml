@@ -1,0 +1,9 @@
+_target_: diploma.data.datasets.onehot.OneHotDataModule
+splits_path: /media/ap/Transcend/Projects/diploma/_local/diploma/assets/data/tmp/openimages/splits.json
+samples_dir: /media/ap/Transcend/Projects/diploma/_local/diploma/assets/data/tmp/openimages/samples
+augmentation: ${augmentation}
+input_size: ${input_size}
+categories_json: /media/ap/Transcend/Projects/diploma/_local/diploma/assets/data/tmp/openimages/categories.json
+
+batch_size: ${batch_size}
+num_workers: 0

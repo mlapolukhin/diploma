@@ -1,0 +1,16 @@
+_local/
+assets/data/
+assets/models/
+assets/runs/
+coursework_5course/
+reports/
+tmp/
+
+__pycache__/
+lightning_logs/
+build/
+dist/
+*.egg-info/
+.vscode/
+.ipynb_checkpoints
+.python-version

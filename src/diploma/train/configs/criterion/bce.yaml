@@ -1,0 +1,2 @@
+_target_: diploma.criterion.criterion.BCECriterion
+reduction: mean

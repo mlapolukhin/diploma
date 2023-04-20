@@ -1,0 +1,17 @@
+- _target_: pytorch_lightning.pytorch.callbacks.EarlyStopping
+  monitor: "loss_epoch/val"
+  patience: 3
+- _target_: pytorch_lightning.pytorch.callbacks.ModelCheckpoint
+  monitor: "loss_epoch/val"
+  filename: "{epoch}-loss_epoch_val-{loss_epoch/val:.2f}"
+- _target_: pytorch_lightning.pytorch.callbacks.ModelCheckpoint
+  monitor: "loss_epoch/val_test"
+  filename: "{epoch}-loss_epoch_val_test-{loss_epoch/val_test:.2f}"
+- _target_: pytorch_lightning.pytorch.callbacks.ModelCheckpoint
+  monitor: "f1/val"
+  filename: "{epoch}-f1_val-{f1/val:.2f}"
+  mode: max
+- _target_: pytorch_lightning.pytorch.callbacks.ModelCheckpoint
+  monitor: "f1/val_test"
+  filename: "{epoch}-f1_val_test-{f1/val_test:.2f}"
+  mode: max

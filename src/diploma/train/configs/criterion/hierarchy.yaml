@@ -1,0 +1,5 @@
+_target_: diploma.criterion.criterion.HierarchyCriterion
+hierarchy_json: /media/ap/Transcend/Projects/diploma/_local/diploma/assets/data/tmp/openimages/hierarchy.json
+L_bce_coef: 1
+L_sim_coef: 1
+L_cat_coef: 1

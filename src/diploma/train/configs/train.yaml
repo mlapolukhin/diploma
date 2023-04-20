@@ -1,0 +1,58 @@
+# === One Hot
+
+defaults:
+  - data: 2023-04-05-onehot.yaml
+  - model: mobilenetv3_simple_softmax.yaml
+  - criterion: bce.yaml
+
+  - optimizer: adam.yaml
+  - metrics: image-classification.yaml
+  - callbacks: default.yaml
+  - trainer: default.yaml
+  - paths: default.yaml
+  - hydra: default.yaml
+  - experiment: null
+  - _self_
+
+seed: 43
+task_name: 'image-classification-onehot'
+
+batch_size: 64
+input_size: [128, 128]
+augmentation: false
+num_categories: 11
+
+task_type: train
+
+# === Hierarchy
+
+# defaults:
+#   - data: 2023-04-05-hierarchy.yaml
+#   - model: mobilenetv3_simple_sigmoid.yaml
+#   - criterion: hierarchy.yaml
+
+#   - optimizer: adam.yaml
+#   - metrics: image-classification.yaml
+#   - callbacks: default.yaml
+#   - trainer: default.yaml
+#   - paths: default.yaml
+#   - hydra: default.yaml
+#   - experiment: null
+#   - _self_
+
+# seed: 43
+# task_name: 'image-classification-hierarchy'
+
+# batch_size: 64
+# input_size: [128, 128]
+# augmentation: false
+# num_categories: 11
+
+# task_type: train
+
+# criterion:
+#   L_cat_coef: 0
+#   L_sim_coef: 0
+#   L_bce_coef: 1
+#   L_seq_coef: 1
+#   L_lvl_coef: 1

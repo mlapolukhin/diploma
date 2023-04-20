@@ -1,0 +1,29 @@
+# average: micro
+average: macro
+training:
+  accuracy:
+    _target_: torchmetrics.Accuracy
+    task: multiclass
+    num_classes: ${num_categories}
+    average: ${metrics.average}
+    top_k: 1
+  precision:
+    _target_: torchmetrics.Precision
+    task: multiclass
+    num_classes: ${num_categories}
+    average: ${metrics.average}
+    top_k: 1
+  recall:
+    _target_: torchmetrics.Recall
+    task: multiclass
+    num_classes: ${num_categories}
+    average: ${metrics.average}
+    top_k: 1
+  f1:
+    _target_: torchmetrics.F1Score
+    task: multiclass
+    num_classes: ${num_categories}
+    average: ${metrics.average}
+    top_k: 1
+validation: ${metrics.training}
+test: ${metrics.training}
